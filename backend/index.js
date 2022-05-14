@@ -16,5 +16,5 @@ app.get('/',(req,res)=>{
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/leave',require('./routes/leave'))
 
-app.listen(5000,()=>{console.log(`Example app listening at http://localhost:${5000}`)});
+app.listen(process.env.PORT,()=>{console.log(`Example app listening at http://localhost:${5000}`)});
 

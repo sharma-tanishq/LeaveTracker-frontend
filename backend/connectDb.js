@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const mongooseURI=`mongodb+srv://tanishq:tanishq@cluster0.gipz0.mongodb.net/LeaveTracker?retryWrites=true&w=majority`
+const mongooseURI=process.env.ATLAS
 
 const connectToMongoose =()=>{
     mongoose.connect(mongooseURI,{keepAlive:true},()=>console.log('Connected to mongoDB succesfully'));
